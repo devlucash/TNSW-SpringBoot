@@ -1,13 +1,13 @@
-package org.seng2050.A3;
+package org.seng2050.TNSW;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class A3 {
+public class TNSW {
 	//	main method used to run application
 	public static void main(String[] args) {
-		SpringApplication.run(A3.class, args);
+		SpringApplication.run(TNSW.class, args);
 	}
 
 }

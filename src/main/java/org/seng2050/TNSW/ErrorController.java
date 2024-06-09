@@ -1,4 +1,4 @@
-package org.seng2050.A3;
+package org.seng2050.TNSW;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -21,14 +21,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ErrorController {
-
-    // this is the only error that maps to login
-    @GetMapping("/error_login")
-    public String getLoginError(Model model) {
-        String default_error = "Invalid login cridentials";
-        model.addAttribute("error", default_error);
-        return "login";
-    }
 
     //everything else should map to the error page with an error param
     @GetMapping("/error")

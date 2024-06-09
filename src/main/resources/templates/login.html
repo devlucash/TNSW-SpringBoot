@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Login | TicketingSystem</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>Issue Ticketing System</header>
+    <div class="center login">
+      <h1 >Login</h1>
+      <form name="login" action="/perform_login" method="POST">
+            <p>User:</p>
+            <input type="text" name="username" maxlength="50" />
+
+            <p>Password:</p>
+            <input  type="password" name="password" maxlength="500" />
+            <input  name="submit" type="submit" value="submit" />
+      </form>
+    </div>
+  </body>
+</html>

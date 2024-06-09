@@ -1,4 +1,4 @@
-package org.seng2050.A3;
+package org.seng2050.TNSW;
 
 import javax.sql.DataSource;
 
@@ -58,14 +58,15 @@ public class SecurityConfiguration {
             requestConstraints.requestMatchers("/error_login").permitAll();
 
             // autheticated users can access homepage. 
-            requestConstraints.requestMatchers("/error*").authenticated(); 
-            requestConstraints.requestMatchers("/homepage").authenticated();
-            requestConstraints.requestMatchers("/issues*").authenticated();
-            requestConstraints.requestMatchers("/SubmitReport*").authenticated();
+            requestConstraints.requestMatchers("/error*").permitAll(); 
+            requestConstraints.requestMatchers("/homepage").permitAll();
+            requestConstraints.requestMatchers("/issues*").permitAll();
+            requestConstraints.requestMatchers("/SubmitReport*").permitAll();
             requestConstraints.requestMatchers("/homepage.html").permitAll();
+            requestConstraints.requestMatchers("/login.html").permitAll();
+            requestConstraints.requestMatchers("/process_query").permitAll();
         });
 
         return httpSecurity.build();
     }
 }
-

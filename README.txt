@@ -1,24 +1,10 @@
-Readme.md file describing the setup procedure
+Readme.txt 
 
-1. Start your database using the provided script and create the connection in azure data studio
-(if issues with database occur, manually drop all tables and attempt to run complete script)
+The Problem:
+Planning trips in NSW is challenging due to various issues that often result in suboptimal routing and trips with multiple modes of transport that have inaccurate buffer times. This complexity can make using public transport stressful.
 
-2. build the project file using ./gradlew build
-3. run the project using        ./gradlew Bootrun
+The Solution (V1):
+The initial solution utilizes PHP to allow users to create a custom trip planner. This planner includes additional buffer time between transport modes based on user preferences, reducing the stress associated with public transport.
 
-4. using http://localhost:8080/cXXXXXXX_cYYYYYYY_cZZZZZZZ_FinalProject/ to access the login page
-    (alternatively)   http://localhost:8080/login
-
-5. The existing users in database in username-password-role/s triples
-(user,     pass1,            {user})
-(it,       pass1,            {it, manager})
-(manager,  pass1,            {it, manager})
-(Ylin,     Iwishyouagoodday, {it, manager}) // we have to use a specific password for this user
-
-
-Additional Requirements chosen for a combined weight of 30
-8. “The categories are very broad and could congest the Knowledge-Base. Can we have some sub-
-categories as well (Appendix 6.2)” – IT staff. (weight 20)
-
-18. “I think we should be able to highlight the recommended solution, some of the proposed
-solutions from users might not be very appropriate” IT staff. (weight 10)
+Version 2:
+The second version improves efficiency by reducing the number of API requests. This is achieved by introducing an SQL server to store data when requests are made. Currently, the SQL server is only hosted on the local computer and is not available online.
